@@ -9,7 +9,7 @@ const LoadingToRedirect = ()=>{
         const interval = setInterval(()=>{
             setCount((currentCount)=>--currentCount)
         },1000);
-        count===0 && navigate("/selectsignin");
+        count===0 && navigate("/");
         return ()=>clearInterval(interval);
     },[count,navigate])
 
