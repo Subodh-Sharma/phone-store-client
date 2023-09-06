@@ -108,7 +108,7 @@ export default function Header() {
               type="text"
               // variant='filled'
               bg="white"
-              // color="white"
+              color="black"
               w="60%"
               marginBottom="5px"
               className="form-control"
