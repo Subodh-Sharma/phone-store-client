@@ -27,7 +27,7 @@ const Home =()=>{
                 {phones.length===0 && (
                     <Text fontSize="2xl">No Phones Found</Text>
                 )}
-            <SimpleGrid columns={3} spacing={6}>
+            <SimpleGrid columns={{sm: 1, md: 2, lg:3}} spacing={6}>
                 {phones && phones.map((item)=><Box w='100%'><PhoneCard key={item._id}{...item}/></Box>)}
                 {/* <MDBCol>
                     <MDBContainer>
