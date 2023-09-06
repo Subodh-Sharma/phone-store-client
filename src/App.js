@@ -50,7 +50,7 @@ const App = () => {
         <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
         <Route path="/updatephone/:id" element={<PrivateRoute><UpdatePhone /></PrivateRoute>} />
         <Route path="/phone/search" element={<Home />} />
-        <Route path="/cart/:id" element={<Cart/>}/>
+        <Route path="/cart/:id" element={<PrivateRoute><Cart /></PrivateRoute>}/>
       </Routes>
     </BrowserRouter>
     </div>
