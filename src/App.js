@@ -15,7 +15,8 @@ import AddPhone from "./pages/AddPhone";
 import { setUser } from "./redux/features/userSlice";
 import { setDealer } from "./redux/features/dealerSlice";
 import { useDispatch } from "react-redux";
-import PrivateRoute from "./components/PrivateRoute";
+import UserPrivateRoute from "./components/UserPrivateRoute";
+import DealerPrivateRoute from "./components/DealerPrivateRoute";
 import Dashboard from "./pages/Dashboard";
 import UpdatePhone from "./pages/UpdatePhone";
 import Cart from "./pages/Cart";
@@ -46,11 +47,11 @@ const App = () => {
         <Route path="/usersignup" element={<UserRegister />} />
         <Route path="/dealersignin" element={<DealerLogin />} />
         <Route path="/dealersignup" element={<DealerRegister />} />
-        <Route path="/addphone" element={<PrivateRoute><AddPhone /></PrivateRoute>} />
-        <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-        <Route path="/updatephone/:id" element={<PrivateRoute><UpdatePhone /></PrivateRoute>} />
+        <Route path="/addphone" element={<DealerPrivateRoute><AddPhone /></DealerPrivateRoute>} />
+        <Route path="/dashboard" element={<DealerPrivateRoute><Dashboard /></DealerPrivateRoute>} />
+        <Route path="/updatephone/:id" element={<DealerPrivateRoute><UpdatePhone /></DealerPrivateRoute>} />
         <Route path="/phone/search" element={<Home />} />
-        <Route path="/cart/:id" element={<PrivateRoute><Cart /></PrivateRoute>}/>
+        <Route path="/cart/:id" element={<UserPrivateRoute><Cart /></UserPrivateRoute>}/>
       </Routes>
     </BrowserRouter>
     </div>
