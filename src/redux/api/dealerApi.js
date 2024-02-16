@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API = axios.create({baseURL:"https://subodh-phone-store-server.vercel.app/"});    // https://subodh-phone-store-mern-app.onrender/
+// const API = axios.create({baseURL:"https://subodh-phone-store-server.vercel.app/"});
+const API = axios.create({baseURL:"http://localhost:8000/"});
 
 API.interceptors.request.use((req)=>{
     if(localStorage.getItem("profile")){
